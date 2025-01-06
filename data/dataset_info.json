@@ -2,6 +2,14 @@
   "identity": {
     "file_name": "identity.json"
   },
+  "finetome": {
+    "hf_hub_url": "mlabonne/FineTome-100k",
+    "formatting": "sharegpt"
+  },
+  "web_instruct_150": {
+    "hf_hub_url": "horus-ai-labs/WebInstructSub-150K",
+    "formatting": "sharegpt"
+  },
   "alpaca_en_demo": {
     "file_name": "alpaca_en_demo.json"
   },
