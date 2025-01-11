@@ -130,7 +130,7 @@ def _load_single_dataset(
             streaming=data_args.streaming,
             num_proc=data_args.preprocessing_num_workers,
             trust_remote_code=model_args.trust_remote_code,
-            download_config="all"
+            config_name="all"
         )
 
 
