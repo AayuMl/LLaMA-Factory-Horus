@@ -11,9 +11,18 @@
     "formatting": "sharegpt"
   },
   "smoltalk": {
-    "hf_hub_url": "HuggingFaceTB/smoltalk",
-    "formatting": "chatgpt",
-    "split": "all"
+    "hf_hub_url": "horus-ai-labs/smoltalk-filtered-further",
+    "formatting": "sharegpt",
+    "columns": {
+	    "messages": "messages"
+    },
+    "tags": {
+	"role_tag": "role", 
+	"content_tag": "content",
+	"user_tag": "user",
+	"assistant_tag": "assistant",
+	"system_tag": "system"
+    }
   },
   "alpaca_en_demo": {
     "file_name": "alpaca_en_demo.json"

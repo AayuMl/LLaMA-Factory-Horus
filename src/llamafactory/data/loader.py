@@ -137,9 +137,7 @@ def _load_single_dataset(
             print(data_dir)
             print(data_files)
 
-            dataset = load_dataset("HuggingFaceTB/smoltalk", "all", name=data_name,
-                data_dir=data_dir,
-                data_files=data_files,
+            dataset = load_dataset("HuggingFaceTB/smoltalk", "all",
                 split=dataset_attr.split,
                 cache_dir=model_args.cache_dir,
                 token=model_args.hf_hub_token,
