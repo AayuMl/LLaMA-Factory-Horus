@@ -133,7 +133,11 @@ def _load_single_dataset(
                 trust_remote_code=model_args.trust_remote_code,
             )
         except:
-            dataset = load_dataset("HuggingFaceTB/smoltalk", "all", cache_dir=model_args.cache_dir,
+            dataset = load_dataset("HuggingFaceTB/smoltalk", "all", name=data_name,
+                data_dir=data_dir,
+                data_files=data_files,
+                split=dataset_attr.split,
+                cache_dir=model_args.cache_dir,
                 token=model_args.hf_hub_token,
                 streaming=data_args.streaming,
                 num_proc=data_args.preprocessing_num_workers,
