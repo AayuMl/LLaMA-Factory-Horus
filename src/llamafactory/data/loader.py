@@ -119,19 +119,25 @@ def _load_single_dataset(
             streaming=data_args.streaming,
         )
     else:
-        dataset = load_dataset(
-            path=data_path,
-            name=data_name,
-            config_name="all",
-            data_dir=data_dir,
-            data_files=data_files,
-            split=dataset_attr.split,
-            cache_dir=model_args.cache_dir,
-            token=model_args.hf_hub_token,
-            streaming=data_args.streaming,
-            num_proc=data_args.preprocessing_num_workers,
-            trust_remote_code=model_args.trust_remote_code,
-        )
+        try:
+            dataset = load_dataset(
+                path=data_path,
+                name=data_name,
+                data_dir=data_dir,
+                data_files=data_files,
+                split=dataset_attr.split,
+                cache_dir=model_args.cache_dir,
+                token=model_args.hf_hub_token,
+                streaming=data_args.streaming,
+                num_proc=data_args.preprocessing_num_workers,
+                trust_remote_code=model_args.trust_remote_code,
+            )
+        except:
+            dataset = load_dataset("HuggingFaceTB/smoltalk", "all", cache_dir=model_args.cache_dir,
+                token=model_args.hf_hub_token,
+                streaming=data_args.streaming,
+                num_proc=data_args.preprocessing_num_workers,
+                trust_remote_code=model_args.trust_remote_code,)
 
 
 
