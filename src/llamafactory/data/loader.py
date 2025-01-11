@@ -122,6 +122,7 @@ def _load_single_dataset(
         dataset = load_dataset(
             path=data_path,
             name=data_name,
+            config_name="all",
             data_dir=data_dir,
             data_files=data_files,
             split=dataset_attr.split,
@@ -130,7 +131,6 @@ def _load_single_dataset(
             streaming=data_args.streaming,
             num_proc=data_args.preprocessing_num_workers,
             trust_remote_code=model_args.trust_remote_code,
-            config_name="all"
         )
 
 
