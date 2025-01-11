@@ -10,6 +10,10 @@
     "hf_hub_url": "horus-ai-labs/WebInstructSub-150K",
     "formatting": "sharegpt"
   },
+  "smoltalk": {
+    "hf_hub_url": "HuggingFaceTB/smoltalk",
+    "formatting": "chatgpt"
+  },
   "alpaca_en_demo": {
     "file_name": "alpaca_en_demo.json"
   },
